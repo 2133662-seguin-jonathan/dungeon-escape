@@ -10,8 +10,6 @@ using UnityEngine.SceneManagement;
 /// Source: https://www.youtube.com/watch?v=YISa0PvQTGk
 public class HandMenu : MonoBehaviour
 {
-    [SerializeField]
-    private InputActionAsset inputActions;
 
     [SerializeField]
     private AudioMixer controlleurAudio;
@@ -32,19 +30,12 @@ public class HandMenu : MonoBehaviour
     [SerializeField, Tooltip("Valeur seulement entre 0.001 et 1")]
     private float volumeSFXDefaut = 0.301f;
 
-
-    private Canvas _handUICanvas;
-    private InputAction _menu;
+    
 
 
     // Start is called before the first frame update
     private void Start()
     {
-        _handUICanvas = GetComponent<Canvas>();
-        _menu = inputActions.FindActionMap("XRI LeftHand").FindAction("Menu");
-        _menu.Enable();
-        _menu.performed += ToggleMenu;
-
         sliderMaitre.value = volumeMaitreDefaut;
         sliderMusique.value = volumeMusiqueDefaut;
         sliderSFX.value = volumeSFXDefaut;
@@ -54,15 +45,7 @@ public class HandMenu : MonoBehaviour
         SetSFXAudio();
     }
 
-    private void OnDestroy()
-    {
-        _menu.performed -= ToggleMenu;
-    }
 
-    public void ToggleMenu(InputAction.CallbackContext context)
-    {
-        _handUICanvas.enabled = !_handUICanvas.enabled;
-    }
 
     public void SetMaitreAudio()
     {

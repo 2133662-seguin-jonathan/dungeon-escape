@@ -1096,6 +1096,11 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2850724720231138050, guid: 698cc725011fdbd44aa35a62a6d117c0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2944412439943195999, guid: 698cc725011fdbd44aa35a62a6d117c0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1149,6 +1154,11 @@ PrefabInstance:
     - target: {fileID: 3038123932023995389, guid: 698cc725011fdbd44aa35a62a6d117c0,
         type: 3}
       propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3697681168712692219, guid: 698cc725011fdbd44aa35a62a6d117c0,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4201292384397461237, guid: 698cc725011fdbd44aa35a62a6d117c0,

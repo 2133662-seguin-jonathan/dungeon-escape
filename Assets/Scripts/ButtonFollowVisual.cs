@@ -51,7 +51,7 @@ public class ButtonFollowVisual : MonoBehaviour
 
         interactable = GetComponent<XRBaseInteractable>();
         interactable.hoverEntered.AddListener(Follow);
-        interactable.hoverExited.AddListener(Reset);
+        interactable.hoverExited.AddListener(ResetHover);
         interactable.selectEntered.AddListener(Freeze);
     }
 
@@ -76,7 +76,7 @@ public class ButtonFollowVisual : MonoBehaviour
         }
     }
 
-    public void Reset(BaseInteractionEventArgs hover)
+    public void ResetHover(BaseInteractionEventArgs hover)
     {
         if (hover.interactorObject is XRPokeInteractor)
         {
@@ -92,6 +92,16 @@ public class ButtonFollowVisual : MonoBehaviour
                 freeze = false;
             }
         }
+    }
+
+    /// <summary>
+    /// Permet de reset complètement le bouton si besoin après pression complète.
+    /// </summary>
+    public void Reset()
+    {
+        isFollowing = false;
+        freeze = false;
+        buttonActivated = false;
     }
 
     public void Freeze(BaseInteractionEventArgs hover)

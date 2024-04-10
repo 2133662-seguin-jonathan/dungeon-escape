@@ -9,7 +9,7 @@ public class PorteVerrou : MonoBehaviour
 {
     private Animator animateur;
 
-    private AudioSource audio;
+    private new AudioSource audio;
 
     public void Start()
     {
