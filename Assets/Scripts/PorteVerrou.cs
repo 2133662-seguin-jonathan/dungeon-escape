@@ -9,15 +9,25 @@ public class PorteVerrou : MonoBehaviour
 {
     private Animator animateur;
 
+    private AudioSource audio;
+
     public void Start()
     {
         animateur = GetComponent<Animator>();
+        audio = GetComponent<AudioSource>();
     }
 
 
     public void OuvrirPorte()
     {
-        animateur.SetBool("EstOuvert", true);
+        audio.Play();
+        StartCoroutine(JouerAnimation());
         Debug.Log("Test porte ouverte");
+    }
+
+    private IEnumerator JouerAnimation()
+    {
+        yield return new WaitForSeconds(1.25f);
+        animateur.SetBool("EstOuvert", true);
     }
 }
