@@ -415,8 +415,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Coucou ceci est un test pour voir si cela a de l'allure. \n\nJe suis un
-    texte d\xE9mo.\n\n\nBonjour la compagnie."
+  m_text: "\nT\xE2che du concierge avant de quitter le donjon:\n\n\n- Aller manger\n\n-
+    Inspecter les colones de pierres\n\n- Nettoyer les objets m\xE9taliques\n\n\nLe
+    ma\xEEtre du donjon, Zangdar,  exige de respecter cet ordre, sous peine de tout
+    recommencer.\n\n\n Sign\xE9:  Reivax\n\nDirecteur Adjoint du Donjon de Naheulbeuk."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

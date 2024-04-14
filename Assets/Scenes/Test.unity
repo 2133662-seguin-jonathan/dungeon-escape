@@ -1176,21 +1176,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4557933749333477119, guid: 698cc725011fdbd44aa35a62a6d117c0,
-        type: 3}
-      propertyPath: m_SelectActionTrigger
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4557933749333477119, guid: 698cc725011fdbd44aa35a62a6d117c0,
-        type: 3}
-      propertyPath: m_PhysicsLayerMask.m_Bits
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 4557933749333477119, guid: 698cc725011fdbd44aa35a62a6d117c0,
-        type: 3}
-      propertyPath: m_InteractionLayers.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 5201448883405289089, guid: 698cc725011fdbd44aa35a62a6d117c0,
         type: 3}
       propertyPath: m_Layer
@@ -1215,21 +1200,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5578987746017031946, guid: 698cc725011fdbd44aa35a62a6d117c0,
-        type: 3}
-      propertyPath: m_SelectActionTrigger
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5578987746017031946, guid: 698cc725011fdbd44aa35a62a6d117c0,
-        type: 3}
-      propertyPath: m_PhysicsLayerMask.m_Bits
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 5578987746017031946, guid: 698cc725011fdbd44aa35a62a6d117c0,
-        type: 3}
-      propertyPath: m_InteractionLayers.m_Bits
-      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5828534789841171336, guid: 698cc725011fdbd44aa35a62a6d117c0,
         type: 3}

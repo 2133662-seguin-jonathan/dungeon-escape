@@ -1,8 +1,8 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 /// <summary>
 /// Permet de controller le menu de la main.
 /// </summary>
@@ -69,5 +69,14 @@ public class HandMenu : MonoBehaviour
     {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
+    }
+
+    public void QuitterJeu()
+    {
+        #if UNITY_EDITOR
+            EditorApplication.isPlaying = false;
+        #else
+          Application.Quit();
+        #endif
     }
 }

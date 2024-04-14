@@ -27,9 +27,15 @@ public class ButtonFollowVisual : MonoBehaviour
     private Material activatedMaterial;
     [SerializeField]    
     private MeshRenderer visualMeshRenderer;
+    [SerializeField, Tooltip("La réponse que donne le bouton à un controlleur d'énigme.")]
+    private string reponseBouton = "1";
+    [SerializeField,Tooltip("Détermine s'il fait partie d'une énigme à plusieur boutons.")]
+    private bool multiBoutonEnigme = false;
 
     [SerializeField, Tooltip("Event se déclenchant lorsque le bouton est actionné.")]
-    private UnityEvent ouvrirVerrou;
+    private UnityEvent actionBoutonSansReponse;
+    [SerializeField, Tooltip("Event se déclenchant lorsque le bouton est actionné.")]
+    private UnityEvent<string> actionBoutonAvecReponse;
 
     private bool freeze = false;
 
@@ -102,6 +108,7 @@ public class ButtonFollowVisual : MonoBehaviour
         isFollowing = false;
         freeze = false;
         buttonActivated = false;
+        actionDone = false;
     }
 
     public void Freeze(BaseInteractionEventArgs hover)
@@ -123,7 +130,15 @@ public class ButtonFollowVisual : MonoBehaviour
                 if (!actionDone)
                 {
                     // Faire quleque chose
-                    ouvrirVerrou?.Invoke();
+                    if (multiBoutonEnigme)
+                    {
+                        actionBoutonAvecReponse?.Invoke(reponseBouton);
+
+                    }else
+                    {
+                        actionBoutonSansReponse?.Invoke();
+                    }
+                    
                     Debug.Log("Bouton activé");
                     actionDone = true;
                 }

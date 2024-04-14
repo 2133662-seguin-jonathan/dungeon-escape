@@ -1,6 +1,7 @@
-using UnityEngine.UI;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Permet d'afficher et controller les boutons pour les UIs
@@ -27,6 +28,16 @@ public class ControlleurUI : MonoBehaviour
 
         _mouvement = inputActions.FindActionMap("XRI LeftHand Locomotion").FindAction("Move");
 
+        _mouvement.Disable();
+
+        if (!_mouvement.enabled)
+            StartCoroutine(DesactiverMouvement());
+
+    }
+
+    private IEnumerator DesactiverMouvement()
+    {
+        yield return new WaitForSeconds(1f);
         _mouvement.Disable();
     }
 
