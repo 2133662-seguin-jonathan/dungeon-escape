@@ -626,11 +626,11 @@
                 },
                 {
                     "name": "",
-                    "id": "c17656d5-a9e3-42f7-9520-742060d6e980",
-                    "path": "<XRController>{LeftHand}/menu",
+                    "id": "89616662-b749-49c4-b4cb-88f4afca7ef3",
+                    "path": "<OculusTouchController>{LeftHand}/primaryButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "Menu",
                     "isComposite": false,
                     "isPartOfComposite": false

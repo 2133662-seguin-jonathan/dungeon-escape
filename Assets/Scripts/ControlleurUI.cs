@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Permet d'afficher et controller les boutons pour les UIs
@@ -45,10 +44,10 @@ public class ControlleurUI : MonoBehaviour
     {
         _menu.performed -= ToggleMenu;
     }
-
     public void ToggleMenu(InputAction.CallbackContext context)
     {
-        handUICanvas.enabled = !handUICanvas.enabled;
+        if (context.performed)
+            handUICanvas.enabled = !handUICanvas.enabled;
     }
 
     public void CommencerJeu()

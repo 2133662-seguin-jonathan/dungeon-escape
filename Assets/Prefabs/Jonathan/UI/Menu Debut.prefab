@@ -220,7 +220,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &148738279692265373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,7 +467,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Instruction:\n\n- Param\xE8tres: \n\t Bouton Menu gauche\n\n- Menu interraction:
+  m_text: "Instruction:\n\n- Param\xE8tres: \n\t Bouton X\n\n- Menu interraction:
     \n\tau touch\xE9 / trigger bouton pour \xE0 distance\n\n- Activer le raycast
     (seulement menus):\n\tbouton grab de droite\n\n- Prendre des objets:\n\tbouton
     grab de gauche et droite\n\nBut du jeu:\n\nS'\xE9chapper du donjon."
