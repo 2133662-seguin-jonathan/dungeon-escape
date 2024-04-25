@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Permet de faire verrouiller et déverrouiler la porte
+/// Permet de déverrouiler la porte
 /// </summary>
 public class PorteVerrou : MonoBehaviour
 {
+    /// <summary>
+    /// L'animateur de la porte.
+    /// </summary>
     private Animator animateur;
 
+    /// <summary>
+    /// LA source audio du sond e la porte qui s'ouvre.
+    /// </summary>
     private new AudioSource audio;
 
     public void Start()
@@ -17,7 +23,9 @@ public class PorteVerrou : MonoBehaviour
         audio = GetComponent<AudioSource>();
     }
 
-
+    /// <summary>
+    /// Permet d'ouvrir la porte.
+    /// </summary>
     public void OuvrirPorte()
     {
         audio.Play();
@@ -25,6 +33,10 @@ public class PorteVerrou : MonoBehaviour
         Debug.Log("Test porte ouverte");
     }
 
+    /// <summary>
+    /// Permet de jouer l'animation d'ouverture avec un délai pour mieux synchroniser le son avec celle-ci.
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator JouerAnimation()
     {
         yield return new WaitForSeconds(1.25f);
